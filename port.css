@@ -13,7 +13,50 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.slider {
+  display: flex;
+ 
+  padding: 5rem 0rem;
+  height: 28rem;
+}
+.sli1{
+  display: flex;
+  position: relative;
+width: 100%;
+  
+}
+.sli1 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
+.btnleft{
+  position: relative;
+  width: 6rem;
+  border: none;  background-color: transparent;
+  margin-right: -5rem;
+  height: auto;
+  z-index: 6;
+  cursor: pointer;
+
+}
+.btnright{ 
+   position: relative;
+  width: 6rem;
+  margin-left: -5rem;
+  background-color: transparent;
+  border: none;
+  height: auto;  cursor: pointer;
+
+  z-index: 6;
+
+}
+/* .btnleft:hover ,.btnright:hover{
+  background-color:rgba(201, 196, 196, 0.836) ;
+} */
 nav {
   display: flex;
   position: sticky;

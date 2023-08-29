@@ -13,7 +13,32 @@ function like2() {
   count2++;
   document.querySelector('.like-count2').textContent = count2;
 }
+const carousel = document.querySelector('.sli1');
+let images = document.querySelectorAll('.sli1 img');
+let currentIndex = 0;
+let interval;
 
+function startCarousel() {
+  interval = setInterval(() => {
+    images[currentIndex].style.opacity = '0';
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.opacity = '1';
+  }, 5000);
+ }
+function left(){ 
+   images[currentIndex].style.opacity = '0';
+  currentIndex = (currentIndex +2) % images.length;
+  images[currentIndex].style.opacity = '1';
+}
+function right(){  
+  images[currentIndex].style.opacity = '0';
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].style.opacity = '1';
+}
+left();
+right();
+
+startCarousel();
 // Store the currently selected div box ID
 let selectedBoxId = null;
 
